@@ -9,10 +9,10 @@ bib:
 	biber --nodieonerror ${file-name}
 
 with-bib:
-	${MAKE} pdf
+	${MAKE} pdf -i
 	${MAKE} bib
-	${MAKE} pdf
-	${MAKE} pdf
+	${MAKE} pdf -i
+	${MAKE} pdf -i
 	${MAKE} clean
 
 .PHONY: clean
