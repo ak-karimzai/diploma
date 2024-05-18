@@ -37,9 +37,6 @@
 	caption={Скрипт для снижения разрешения изображений},
 	label=lst:downsampling,
 	language=Python]
-import os
-from PIL import Image
-
 def resize_image(input_path, output_path, target_width, target_height):
     with Image.open(input_path) as img:
         resized_img = img.resize((target_width, target_height))
@@ -317,7 +314,7 @@ class EdgeLoss(nn.Module):
 
 На листинге (\ref{lst:lossfunc}), предствалено реализации интерфейса коммандной строки:
 \begin{lstlisting}[
-	caption={Реализация интерфейса коммандной строки},
+	caption={Реализация интерфейса коммандной строки часть 1},
 	label=lst:lossfunc,
 	language=Python]
 usage: main.py [-h] [--mode {train,predict}] [--input_dir INPUT_DIR]
@@ -336,6 +333,12 @@ optional arguments:
                 Directory for results
     --weights WEIGHTS     Path to weights
     --dataset DATASET     Dataset for testing or validation
+\end{lstlisting}
+
+\begin{lstlisting}[
+    caption={Реализация интерфейса коммандной строки часть 2},
+    label=lst:lossfunc,
+    language=Python]
     --gpus GPUS           CUDA_VISIBLE_DEVICES
     --config CONFIG       Path to training configuration file
 \end{lstlisting}
