@@ -28,7 +28,14 @@
 	\include{50-research}
 	
 	\include{60-conclusion}
-	
+
+    \titleformat{\chapter}[block]
+    {\large\bfseries}{\thechapter}{0.5em}{\large\raggedright}
+
+    \titleformat{\section}[block]
+    {\large\bfseries}{\thesection}{0.5em}{\large\raggedright}
+    \renewcommand{\thesection}{\arabic{chapter}.\arabic{section}.}
+
 	\printbibliography[title=\centerline{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}]
 	\addcontentsline{toc}{part}{\textbf{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}}
 	

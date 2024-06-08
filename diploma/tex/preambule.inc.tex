@@ -82,10 +82,10 @@
 {\large\bfseries}{\thechapter}{0.5em}{\large\centering}
 
 \titleformat{\chapter}[block]
-{\large\bfseries}{\thechapter}{0.5em}{\large\raggedright}
+{\hspace{\parindent}\large\bfseries}{\thechapter}{0.5em}{\large\raggedright}
 
 \titleformat{\section}[block]
-{\large\bfseries}{\thesection}{0.5em}{\large\raggedright}
+{\hspace{\parindent}\large\bfseries}{\thesection}{0.5em}{\large\raggedright}
 \renewcommand{\thesection}{\arabic{chapter}.\arabic{section}.}
 
 \titleformat{\subsection}[block]
@@ -114,6 +114,7 @@
 \captionsetup[figure]{justification=centering}
 \captionsetup[table]{justification=raggedleft}
 \captionsetup[listing]{justification=raggedright}
+\captionsetup[figure]{name=Рисунок}
 
 
 % ---------------------------------------- ABBRS --------------------------------- %
@@ -279,3 +280,23 @@
 \usepackage{diagbox}
 
 \newcommand{\myrule}{\rule[-.4cm]{0pt}{1.05cm}}
+
+\usepackage{tocloft}
+
+\setlength{\cftbeforetoctitleskip}{0pt}
+\renewcommand{\contentsname}{СОДЕРЖАНИЕ}
+\renewcommand{\cfttoctitlefont}{\hfill\normalsize\bfseries}
+\renewcommand{\cftaftertoctitle}{\hfill\mbox{}}
+
+
+% Remove padding for TOC entries
+\renewcommand{\cftsecindent}{0em}
+\renewcommand{\cftsubsecindent}{0em}
+\renewcommand{\cftsubsubsecindent}{0em}
+
+% Customizing TOC entries font and alignment
+\renewcommand{\cftsecfont}{\normalsize}
+\renewcommand{\cftsubsecfont}{\normalsize}
+\renewcommand{\cftsubsubsecfont}{\normalsize}
+
+\setlength{\cftbeforetoctitleskip}{-20pt}

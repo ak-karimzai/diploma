@@ -1,0 +1,36 @@
+\documentclass[a4paper,14pt,russian]{extreport}
+
+\input{preambule.inc}
+
+\addbibresource{ref-lib.bib}
+
+\begin{document}
+	\renewcommand{\contentsname}{\centerline{СОДЕРЖАНИЕ}}
+	
+	% \include{00-title}
+	
+	\setcounter{page}{3}
+	
+	% \include{01-abstract.tex}
+	
+	\tableofcontents
+	
+	% \include{02-abbreviations}
+	
+	\include{practice-intro}
+	% \include{20-analyth}
+	
+	% \include{30-design}
+	
+	\include{practice-impl}
+	
+	\include{50-research}
+	
+	\include{practice-conclusion}
+	
+	\printbibliography[title=\centerline{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}]
+	\addcontentsline{toc}{part}{\textbf{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}}
+	
+	\include{70-appendix}
+
+\end{document}
